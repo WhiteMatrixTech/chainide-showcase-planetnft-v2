@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
-// @title Theirsverse NFT
+// @title Planet NFT
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol";
@@ -25,11 +25,15 @@ contract Planet is IPlanet, Ownable, ERC721A, AccessControl, ReentrancyGuard {
     string public baseURI;
 
     constructor(
+        string memory _name,
+        string memory _symbol,
+        string memory _baseuri,
         uint256 _salePrice,
         uint256 _maxSupply
-    ) ERC721A("PLANETNFT", "PNFT") {
-        salePrice = _salePrice;
+    ) ERC721A(_name, _symbol) {
+        salePrice = _salePrice * 10 ** 18;
         maxSupply = _maxSupply;
+        baseURI = _baseuri;
         _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
     }
 
