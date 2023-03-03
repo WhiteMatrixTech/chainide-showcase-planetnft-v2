@@ -2,7 +2,9 @@
 
 This is a project for ChainIDE showcase.
 
-Edit ```frontend/components/contractInfo.ts```
+## Compile ```contracts/Planet.sol```
+
+## Edit ```frontend/components/contractInfo.ts```
 
 planetPerPrice：
 
@@ -11,7 +13,7 @@ planetContractAddres:
 planetContractAbi：
 
 
-Build & start frontend (NFT Mint Page)
+## Build & start frontend (NFT Mint Page)
 
 ```
 cd frontend
