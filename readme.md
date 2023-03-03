@@ -2,6 +2,15 @@
 
 This is a project for ChainIDE showcase.
 
+Edit ```frontend/components/contractInfo.ts```
+
+planetPerPrice：
+
+planetContractAddres:
+
+planetContractAbi：
+
+
 Build & start frontend (NFT Mint Page)
 
 ```
